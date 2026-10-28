@@ -1,0 +1,13 @@
+Trustworthy Reinforcement Learning for Adaptive Pulmonary Management: Uncertainty-Aware Digital Twins with Prospective Silent-Mode Validation
+
+Research components only. The complete study pipeline and clinical use are not validated. Data access is controlled by the dataset providers. The cohort selection, event derivation, measurement mapping, and split stratification require additional source details. No patient records are included.
+
+TransitionDataset reads a locally prepared NPZ with physiology [N,48,F], image [N,1,32,32], image_present [N], action [N,3], and target [N]. It does not extract either public cohort. Input units, normalization, target construction, and cohort construction are unspecified by the manuscript. Do not interpret the format as an official cohort representation.
+
+The encoder has four convolutions, two four-head transformer blocks, and cross-attention with EIT query and physiology keys and values. The critic emits normal-inverse-gamma parameters. The actor produces Gaussian parameters but has no policy training implementation. The provided training function fits the critic to supplied targets; it is not the manuscript's reinforcement learning loop.
+
+Engineering choices that are not specified in the paper include convolution kernels and strides, width, activations, positional encoding, pooling, missing-modality fusion, actor distribution parameterization and scale clamp, beta offset, optimizer, regularization coefficient, and input format. Callers must provide any optimization settings.
+
+The data-provider pages listed in dataset_urls.txt identify MIMIC-IV v2.2 and eICU-CRD v2.0 and their respective PhysioNet Credentialed Health Data License 1.5.0 and restricted-access requirements. Private retrospective and prospective records are not redistributable according to the manuscript. The manuscript cites Amini et al., Deep Evidential Regression, NeurIPS 2020, for the evidential objective; no third-party source code is included. No project license is asserted.
+
+The manuscript gives the sample-based uncertainty threshold as an order statistic. It does not establish empirical risk guarantees for a new dataset without the assumptions stated in the manuscript. Its displayed value-gap identity and appendix differ in whether the transition residual has a discount factor; its reported modality inflation factors also differ. Neither inconsistency is resolved here.

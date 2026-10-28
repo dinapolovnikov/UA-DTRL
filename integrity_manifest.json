@@ -1,0 +1,66 @@
+{
+  "algorithm": "sha256",
+  "scope": "All project files except this manifest",
+  "files": [
+    {
+      "path": "claim_to_code.json",
+      "sha256": "42bfeea9b1d688739023f4a6160a478c013d70628937ead5bc085987c0f77140",
+      "bytes": 6737
+    },
+    {
+      "path": "code/pulmonary/__init__.py",
+      "sha256": "e36c0ff9bd3fe950a91345337ae4d47c4a733b4ecae0150237f4395981729178",
+      "bytes": 209
+    },
+    {
+      "path": "code/pulmonary/data.py",
+      "sha256": "e61b62ae9de5cc84602eb3a7eaf2ec06450920ebbcd247b6880517556ce1f35e",
+      "bytes": 1815
+    },
+    {
+      "path": "code/pulmonary/evidence.py",
+      "sha256": "adac81fac2d67310e26cee10c8ab1731806325c721311dafe708984562b0d3af",
+      "bytes": 751
+    },
+    {
+      "path": "code/pulmonary/metrics.py",
+      "sha256": "475e862a6ac825c3ac98b45f067c2f22f11fb7c1b1018f4223f8e3a79d4ccf23",
+      "bytes": 2261
+    },
+    {
+      "path": "code/pulmonary/model.py",
+      "sha256": "8366e246f7aaad8ea27e7024fca25ee8f75703241fd0ad30c953817e6b58d75a",
+      "bytes": 3498
+    },
+    {
+      "path": "code/pulmonary/selective.py",
+      "sha256": "91ac32f0e8494c98d899fd9250e394369244878cb4385cfe116c6c8650778229",
+      "bytes": 837
+    },
+    {
+      "path": "code/pulmonary/training.py",
+      "sha256": "ed944bd20c217860c992bd19c6a273fefd81266deeef845d80fa211c77971420",
+      "bytes": 2082
+    },
+    {
+      "path": "code/requirements.txt",
+      "sha256": "0110fee904be776e9fa7551d4c875fa95d053569a6cd06cde47cc802f9720a8c",
+      "bytes": 23
+    },
+    {
+      "path": "dataset_urls.txt",
+      "sha256": "83f3df4940c2ff0fb394212c918e36646aa52ada6ceaa0b982a09cb2b8bcb67a",
+      "bytes": 87
+    },
+    {
+      "path": "research_notes.txt",
+      "sha256": "ab5d3be15222334ad957500de79e4b2255ec78250ae98d792d6ba5790e5d1ec0",
+      "bytes": 2415
+    },
+    {
+      "path": "verification_report.json",
+      "sha256": "99d3ee39e2deff3a7c04354f63d6b28619e011edcf5250fd1b2bf6e9d39b09bc",
+      "bytes": 2100
+    }
+  ]
+}

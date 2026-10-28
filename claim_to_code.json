@@ -1,0 +1,182 @@
+{
+  "claims": [
+    {
+      "id": "01",
+      "source": "Methods, Problem formulation, Eq. 2, p. 12",
+      "claim": "Uncertainty-penalized discounted policy objective",
+      "status": "BLOCKED",
+      "files": [],
+      "qualification": "Actor optimization, reward definitions, penalty weights, action bounds and training recipe are not sufficiently specified."
+    },
+    {
+      "id": "02",
+      "source": "Results, Eq. 1, p. 6 and Appendix A, pp. 20–21",
+      "claim": "One-step twin bias identity",
+      "status": "BLOCKED",
+      "files": [],
+      "qualification": "Displayed equation and appendix differ in the discount multiplying the transition residual; no logs or estimators available."
+    },
+    {
+      "id": "03",
+      "source": "Methods, Framework, Fig. 2, p. 13",
+      "claim": "Four convolutional layers for 32 by 32 EIT",
+      "status": "NOT_RUN",
+      "files": [
+        "code/pulmonary/model.py"
+      ],
+      "qualification": "Layer count and shape represented; kernels, strides, pooling and activations are engineering choices."
+    },
+    {
+      "id": "04",
+      "source": "Methods, Framework, p. 13",
+      "claim": "Two-block four-head transformer on 48 observations",
+      "status": "NOT_RUN",
+      "files": [
+        "code/pulmonary/model.py"
+      ],
+      "qualification": "Feature width, positional representation and dropout are engineering choices."
+    },
+    {
+      "id": "05",
+      "source": "Methods, Framework, p. 13",
+      "claim": "EIT query and physiology keys and values in cross-attention",
+      "status": "NOT_RUN",
+      "files": [
+        "code/pulmonary/model.py"
+      ],
+      "qualification": "Single image query; exact fusion details and missing-token gate are engineering choices."
+    },
+    {
+      "id": "06",
+      "source": "Fig. 2, p. 13",
+      "claim": "Actor and critic use three 256-unit hidden layers",
+      "status": "NOT_RUN",
+      "files": [
+        "code/pulmonary/model.py"
+      ],
+      "qualification": "Activation and Gaussian parameterization are engineering choices; actor is not trained."
+    },
+    {
+      "id": "07",
+      "source": "Methods, Framework, p. 13",
+      "claim": "NIG critic with nu=softplus+0.1 and alpha=softplus+1.1",
+      "status": "NOT_RUN",
+      "files": [
+        "code/pulmonary/model.py"
+      ],
+      "qualification": "Positive beta offset and input encoding are engineering choices."
+    },
+    {
+      "id": "08",
+      "source": "Results, p. 3",
+      "claim": "Aleatoric beta/(alpha-1), epistemic beta/((alpha-1)nu)",
+      "status": "NOT_RUN",
+      "files": [
+        "code/pulmonary/evidence.py"
+      ],
+      "qualification": "Formula is present; current verification materials are unavailable."
+    },
+    {
+      "id": "09",
+      "source": "Methods, Framework, p. 13; reference 14",
+      "claim": "NIG negative log likelihood and evidence regularizer",
+      "status": "NOT_RUN",
+      "files": [
+        "code/pulmonary/evidence.py"
+      ],
+      "qualification": "Formula is present; regularizer weight is not reported."
+    },
+    {
+      "id": "10",
+      "source": "Methods, Framework, p. 14",
+      "claim": "Threshold order statistic at alpha 0.10",
+      "status": "NOT_RUN",
+      "files": [
+        "code/pulmonary/selective.py"
+      ],
+      "qualification": "Small calibration sets use infinity when the rank exceeds sample count; strict exceedance defers."
+    },
+    {
+      "id": "11",
+      "source": "Methods, Framework, p. 14",
+      "claim": "Behavioral-cloning default action",
+      "status": "BLOCKED",
+      "files": [],
+      "qualification": "Behavior policy fitting, conditioning, and data are not provided."
+    },
+    {
+      "id": "12",
+      "source": "Methods, Framework, p. 14",
+      "claim": "Patient-specific one-compartment lung twin and one-step meta-adaptation",
+      "status": "BLOCKED",
+      "files": [],
+      "qualification": "Transition equations, calibration likelihood and optimization settings are not supplied."
+    },
+    {
+      "id": "13",
+      "source": "Methods, Problem formulation, p. 12",
+      "claim": "Clinical reward and EIT and safety penalties",
+      "status": "BLOCKED",
+      "files": [],
+      "qualification": "Weights of clinical changes appear, but units, normalization, component definitions and penalty scales are incomplete."
+    },
+    {
+      "id": "14",
+      "source": "Methods, Cohorts, p. 10",
+      "claim": "Eligibility and patient-level 70/15/15 severity-stratified splits",
+      "status": "BLOCKED",
+      "files": [],
+      "qualification": "Cohort-specific diagnosis mapping, severity strata, extraction rules, and accessible study data are missing."
+    },
+    {
+      "id": "15",
+      "source": "Methods, Statistical analysis, p. 14",
+      "claim": "AUROC, Brier, equal-mass ECE/MCE and decision-curve net benefit",
+      "status": "NOT_RUN",
+      "files": [
+        "code/pulmonary/metrics.py"
+      ],
+      "qualification": "Ties across equal-mass bins follow stable input order as an engineering convention."
+    },
+    {
+      "id": "16",
+      "source": "Methods, Statistical analysis, p. 14",
+      "claim": "AUPRC, BCa confidence intervals, DeLong, Holm, logistic calibration, I-squared, Cohen d and paired bootstrap",
+      "status": "NOT_RUN",
+      "files": [],
+      "qualification": "Not implemented or evaluated."
+    },
+    {
+      "id": "17",
+      "source": "Results and Methods, pp. 3–5, 11–12",
+      "claim": "Prospective cohort and clinician interaction evaluation",
+      "status": "BLOCKED",
+      "files": [],
+      "qualification": "Institution-held observations and adjudications unavailable."
+    },
+    {
+      "id": "18",
+      "source": "Results, pp. 5–6 and Discussion, pp. 6–9",
+      "claim": "EIT surrogate and twin audits, ablations and baseline comparisons",
+      "status": "BLOCKED",
+      "files": [],
+      "qualification": "Bedside EIT, model outputs, trajectories, experiment configurations and baseline code are unavailable; reported inflation factors disagree."
+    },
+    {
+      "id": "19",
+      "source": "Results p. 3; Methods p. 14",
+      "claim": "48 configurations and 500-epoch ceiling for baseline controllers; five seed analysis",
+      "status": "NOT_RUN",
+      "files": [],
+      "qualification": "No equivalent configuration or training on datasets has been executed."
+    },
+    {
+      "id": "20",
+      "source": "Appendix A, pp. 18–21",
+      "claim": "Theorems 1–3, propositions 4–5 and corollary 6",
+      "status": "NOT_RUN",
+      "files": [],
+      "qualification": "Mathematical statements are not implemented as empirical guarantees; the manuscript contains unresolved logical and equation discrepancies."
+    }
+  ]
+}

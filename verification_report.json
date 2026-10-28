@@ -1,0 +1,51 @@
+{
+  "overall_status": "UNVERIFIED",
+  "scope": "Research components only; no verified full study or clinical workflow.",
+  "checks": [
+    {
+      "name": "manuscript cross-check",
+      "status": "PASS",
+      "evidence": "Claims and omissions recorded in claim_to_code.json; individual entries do not all pass."
+    },
+    {
+      "name": "runtime and numerical verification",
+      "status": "NOT_RUN",
+      "evidence": "Prior verification files were removed; runtime checks cannot be rerun from this project."
+    },
+    {
+      "name": "real cohort ingestion and outcomes",
+      "status": "BLOCKED",
+      "evidence": "Public files require credentialed access and private cohorts are held by institutions."
+    },
+    {
+      "name": "official implementation and supplementary material",
+      "status": "BLOCKED",
+      "evidence": "No matching supplemental document or official implementation found; manuscript states code available on request and after publication."
+    },
+    {
+      "name": "full reinforcement learning and twin study",
+      "status": "BLOCKED",
+      "evidence": "Important equations, data transformations, policy updates and hyperparameters are unspecified."
+    },
+    {
+      "name": "minimum 4500 effective code lines",
+      "status": "FAIL",
+      "evidence": "Requested line count is not met; no padding or duplicate implementations added."
+    },
+    {
+      "name": "docker build, black and isort",
+      "status": "NOT_RUN",
+      "evidence": "No container configuration supplied; format checks not executed."
+    },
+    {
+      "name": "dataset landing pages",
+      "status": "PASS",
+      "evidence": "Official versioned PhysioNet pages were opened and matched; data files themselves require credentialed access."
+    }
+  ],
+  "paper_discrepancies": [
+    "Equation 1 and its appendix differ by a discount factor on the transition residual.",
+    "Reported EIT ablation inflation differs across Results and Discussion.",
+    "Coverage of uncertainty scores alone does not establish conditional error bounds without further calibration assumptions."
+  ]
+}
